@@ -1,0 +1,122 @@
+{
+  "title": "ControlGestual · Jarvis",
+  "description": "Asistente local de Windows con gestos de mano, comandos de voz en español e IA local opcional para controlar ventanas.",
+  "description_translation": "Local Windows assistant with hand gestures, Spanish voice commands and optional local AI for window control.",
+  "source_language": "es",
+  "title_translation": "ControlGestual · Jarvis",
+  "technologies": [
+    "Python",
+    "JavaScript",
+    "Win32",
+    "MediaPipe",
+    "Vosk",
+    "Ollama",
+    "Qwen3",
+    "ADB",
+    "scrcpy"
+  ],
+  "github": "https://github.com/H1r0waz/ControlGestual",
+  "demo": null,
+  "image": "https://raw.githubusercontent.com/H1r0waz/ControlGestual/main/docs/images/jarvis-desktop.png",
+  "case_study": {
+    "version": 1,
+    "es": {
+      "category": "IA local y automatización de escritorio",
+      "subtitle": "Gestos, voz y ventanas en una consola inspirada en Jarvis.",
+      "summary": "Control de ventanas de Windows mediante cámara web y órdenes de voz en español, con un asistente de IA que funciona localmente.",
+      "problem": "Mover y organizar ventanas entre monitores requiere alternar repetidamente entre el teclado y el mouse. Una interfaz multimodal necesita conservar el objetivo y evitar acciones involuntarias.",
+      "solution": "Una consola local combina gestos configurables, reconocimiento de voz acotado y conversación opcional con Qwen. Windows ejecuta acciones sobre una ventana identificada y las propuestas del modelo requieren confirmación.",
+      "features": [
+        "Mover ventanas entre pantallas, minimizar, maximizar, restaurar y acomodar",
+        "Puño y contactos de dedos con pulgar configurables, calibración y vista de la mano",
+        "Comandos offline en español y consulta libre explícita de una sola frase",
+        "IA local opcional, contexto de ventana, cancelación y confirmación de propuestas",
+        "Bandeja, F8 para pausar, historial y deshacer acciones compatibles",
+        "Integración opcional de Android mediante ADB/scrcpy y vinculación inalámbrica"
+      ],
+      "architecture": [
+        "Python coordina Win32, audio y servidor HTTP local",
+        "Interfaz JavaScript/CSS y detección MediaPipe en un worker",
+        "Vosk para voz; instancia propia de Ollama con Qwen3 1.7B opcional",
+        "Acciones del modelo limitadas a una lista permitida y comprobación del objetivo"
+      ],
+      "verification": [
+        "82 pruebas Python y 21 pruebas JavaScript ejecutadas correctamente",
+        "Recorridos de navegador en código fuente y ejecutable, con cámara y voz sintéticas",
+        "Interfaz revisada a 360, 390, 650 y 1440 px; siete estados y movimiento reducido"
+      ],
+      "limitations": [
+        "Aplicación local para Windows; no hay demo web del control del escritorio",
+        "Las pruebas sintéticas no miden la precisión con la voz, cámara o iluminación de cada usuario",
+        "El teléfono real no fue validado en esta entrega; requiere vinculación local",
+        "La IA no abre apps cerradas, consulta internet, lee archivos/pantalla ni ejecuta comandos arbitrarios",
+        "El runtime y los modelos pesados se preparan por separado"
+      ],
+      "demoStatus": "Aplicación de escritorio · código y capturas disponibles",
+      "imageCaption": "Consola 5.3 con ventana de demostración; cámara, micrófono e IA apagados."
+    },
+    "en": {
+      "category": "Local AI and desktop automation",
+      "subtitle": "Gestures, voice and windows in a Jarvis-inspired console.",
+      "summary": "Windows window management through webcam gestures and Spanish voice commands, with an optional assistant running locally.",
+      "problem": "Moving windows across monitors repeatedly shifts attention between mouse and keyboard. Multimodal controls must preserve targets and avoid accidental actions.",
+      "solution": "A local console combines configurable gestures, constrained speech recognition and optional Qwen conversation. Windows actions address an identified window, and model proposals require confirmation.",
+      "features": [
+        "Move windows between displays; minimize, maximize, restore and arrange",
+        "Configurable fist and thumb/finger contacts, calibration and hand preview",
+        "Offline Spanish commands and explicit one-utterance free-form questions",
+        "Optional local AI, window context, cancellation and proposal confirmation",
+        "System tray, F8 pause, history and undo for supported actions",
+        "Optional Android integration via ADB/scrcpy with wireless pairing"
+      ],
+      "architecture": [
+        "Python coordinates Win32, audio and a local HTTP server",
+        "JavaScript/CSS interface and MediaPipe detection in a worker",
+        "Vosk speech recognition; optional owned Ollama instance with Qwen3 1.7B",
+        "Allowlisted model actions and validation of the original window target"
+      ],
+      "verification": [
+        "82 Python tests and 21 JavaScript tests executed successfully",
+        "Source and packaged browser journeys using synthetic camera/voice inputs",
+        "UI checked at 360, 390, 650 and 1440 px, including seven states and reduced motion"
+      ],
+      "limitations": [
+        "Local Windows desktop application; no browser demo of desktop control",
+        "Synthetic tests do not establish accuracy with each user’s voice, camera or lighting",
+        "A real phone was not validated for this delivery; local pairing is required",
+        "The AI does not launch closed apps, browse the web, read files/screens or execute arbitrary commands",
+        "Heavy runtimes and models require separate preparation"
+      ],
+      "demoStatus": "Desktop application · source and screenshots available",
+      "imageCaption": "Version 5.3 console with a demonstration window; camera, microphone and AI disabled."
+    },
+    "screenshots": [
+      {
+        "src": "https://raw.githubusercontent.com/H1r0waz/ControlGestual/main/docs/images/jarvis-desktop.png",
+        "width": 1440,
+        "height": 1050,
+        "alt": {
+          "es": "Consola Jarvis desktop",
+          "en": "Jarvis console desktop"
+        },
+        "caption": {
+          "es": "Captura real de la interfaz 5.3 con objetivo de demostración.",
+          "en": "Actual version 5.3 UI screenshot with a demonstration target."
+        }
+      },
+      {
+        "src": "https://raw.githubusercontent.com/H1r0waz/ControlGestual/main/docs/images/jarvis-mobile.png",
+        "width": 390,
+        "height": 900,
+        "alt": {
+          "es": "Consola Jarvis mobile",
+          "en": "Jarvis console mobile"
+        },
+        "caption": {
+          "es": "Captura real de la interfaz 5.3 con objetivo de demostración.",
+          "en": "Actual version 5.3 UI screenshot with a demonstration target."
+        }
+      }
+    ]
+  }
+}

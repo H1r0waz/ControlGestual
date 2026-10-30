@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Control Gestual",
+  "version": "0.1.0",
+  "description": "Mueve ventanas y pestañas de Chrome entre monitores con botones o gestos locales.",
+  "minimum_chrome_version": "120",
+  "permissions": ["system.display", "storage"],
+  "background": {"service_worker": "background.js", "type": "module"},
+  "action": {"default_title": "Abrir Control Gestual"},
+  "commands": {"pause-control": {"suggested_key": {"default": "Alt+Shift+P"}, "description": "Apagar la cámara de Control Gestual"}},
+  "content_security_policy": {"extension_pages": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self'; connect-src 'self'; img-src 'self' data:; media-src 'self' blob:; object-src 'none'"}
+}
